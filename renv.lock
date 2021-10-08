@@ -119,7 +119,7 @@
 		},
 		"Rcpp" : {
 			"Package" : "Rcpp",
-			"Version" : "1.0.6",
+			"Version" : "1.0.7",
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
@@ -700,13 +700,13 @@
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
-			"Version" : "2.1.0",
+			"Version" : "2.1.2",
 			"Source" : "GitHub",
 			"RemoteType" : "github",
 			"RemoteHost" : "api.github.com",
 			"RemoteRepo" : "CohortDiagnostics",
 			"RemoteUsername" : "ohdsi",
-			"RemoteRef" : "v2.1.0"
+			"RemoteRef" : "v2.1.2"
 		},
 		"OhdsiSharing" : {
 			"Package" : "OhdsiSharing",
