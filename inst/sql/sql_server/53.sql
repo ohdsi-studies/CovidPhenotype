@@ -7,11 +7,11 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37311060,37311060)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37311061,37311061)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (37311060,37311060)
+  and ca.ancestor_concept_id in (37311061,37311061)
   and c.invalid_reason is null
 
 ) I
@@ -28,11 +28,11 @@ UNION  select c.concept_id
 ) I
 LEFT JOIN
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37310260)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37310258)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (37310260)
+  and ca.ancestor_concept_id in (37310258)
   and c.invalid_reason is null
 
 ) E ON I.concept_id = E.concept_id
@@ -164,7 +164,7 @@ from
 JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 5)
 ) C
 
-WHERE C.value_as_concept_id in (45877990,9191,45884080,4181412,45879440,4126681)
+WHERE C.value_as_concept_id in (45877985,9191,45884084,4181412,45879438,4126681)
 -- End Measurement Criteria
 
 ) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-3,P.START_DATE) AND A.START_DATE <= DATEADD(day,3,P.START_DATE) ) cc 
@@ -212,7 +212,7 @@ from
 JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 5)
 ) C
 
-WHERE C.value_as_concept_id in (9189,9190,4132135,45878580,45880300,45884090,3661867)
+WHERE C.value_as_concept_id in (9189,9190,4132135,45878583,45880296,45884086,3661867)
 -- End Measurement Criteria
 
 ) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-3,P.START_DATE) AND A.START_DATE <= DATEADD(day,3,P.START_DATE) ) cc 

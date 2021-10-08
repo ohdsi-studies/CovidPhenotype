@@ -60,7 +60,7 @@ for (i in (1:nrow(studyCohorts))) {
     id = studyCohorts$id[[i]],
     createdDate = studyCohorts$createdDate[[i]],
     modifiedDate = studyCohorts$createdDate[[i]],
-    logicDescription = studyCohorts$description[[i]],
+    logicDescription = stringr::str_trim(stringr::str_squish(cohortDefinition$name)),
     name = stringr::str_trim(stringr::str_squish(cohortDefinition$name)),
     expression = cohortDefinition$expression
   )
@@ -85,7 +85,7 @@ specifications <- list(id = 1,
                        cohortDefinitions = cohortDefinitionsArray)
 
 jsonFileName <- paste0(file.path(tempFolder, "CohortDiagnosticsSpecs.json"))
-write(x = specifications %>% RJSONIO::toJSON(pretty = TRUE), file = jsonFileName)
+write(x = specifications %>% RJSONIO::toJSON(pretty = TRUE, digits = 23), file = jsonFileName)
 
 
 ##############################################################

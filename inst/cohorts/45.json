@@ -12,7 +12,7 @@
           "isExcluded": false,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731106E7,
+            "CONCEPT_ID": 37311061,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "840539006",
             "VOCABULARY_ID": "SNOMED",
@@ -29,7 +29,7 @@
           "isExcluded": false,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731106E7,
+            "CONCEPT_ID": 37311061,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "840539006",
             "VOCABULARY_ID": "SNOMED",
@@ -69,7 +69,7 @@
           "isExcluded": true,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731026E7,
+            "CONCEPT_ID": 37310258,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "1240461000000109",
             "VOCABULARY_ID": "SNOMED",

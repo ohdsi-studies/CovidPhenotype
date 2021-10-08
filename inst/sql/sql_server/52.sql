@@ -17,11 +17,11 @@ UNION  select c.concept_id
 ) I
 LEFT JOIN
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37310260)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (37310258)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (37310260)
+  and ca.ancestor_concept_id in (37310258)
   and c.invalid_reason is null
 
 ) E ON I.concept_id = E.concept_id
@@ -51,7 +51,7 @@ JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id
 ) C
 
 WHERE C.measurement_date > DATEFROMPARTS(2019, 12, 1)
-AND C.value_as_concept_id in (9189,9190,3661867,4132135,45878580,45880300,45884090)
+AND C.value_as_concept_id in (9189,9190,3661867,4132135,45878583,45880296,45884086)
 -- End Measurement Criteria
 
   ) E
@@ -104,7 +104,7 @@ FROM cteIncludedEvents Results
 -- date offset strategy
 
 select event_id, person_id, 
-  case when DATEADD(day,1,start_date) > op_end_date then op_end_date else DATEADD(day,1,start_date) end as end_date
+  case when DATEADD(day,0,start_date) > op_end_date then op_end_date else DATEADD(day,0,start_date) end as end_date
 INTO #strategy_ends
 from #included_events;
 

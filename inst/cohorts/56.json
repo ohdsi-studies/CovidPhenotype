@@ -12,7 +12,7 @@
           "isExcluded": false,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731106E7,
+            "CONCEPT_ID": 37311061,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "840539006",
             "VOCABULARY_ID": "SNOMED",
@@ -29,7 +29,7 @@
           "isExcluded": false,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731106E7,
+            "CONCEPT_ID": 37311061,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "840539006",
             "VOCABULARY_ID": "SNOMED",
@@ -69,7 +69,7 @@
           "isExcluded": true,
           "concept": {
             "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 3.731026E7,
+            "CONCEPT_ID": 37310258,
             "STANDARD_CONCEPT": "S",
             "CONCEPT_CODE": "1240461000000109",
             "VOCABULARY_ID": "SNOMED",
@@ -148,7 +148,7 @@
           },
           {
             "INVALID_REASON_CAPTION": "Unknown",
-            "CONCEPT_ID": 4.587799E7,
+            "CONCEPT_ID": 45877985,
             "STANDARD_CONCEPT": null,
             "CONCEPT_CODE": "LA11882-0",
             "VOCABULARY_ID": "LOINC",
@@ -172,7 +172,7 @@
           },
           {
             "INVALID_REASON_CAPTION": "Unknown",
-            "CONCEPT_ID": 4.588408E7,
+            "CONCEPT_ID": 45884084,
             "STANDARD_CONCEPT": null,
             "CONCEPT_CODE": "LA6576-8",
             "VOCABULARY_ID": "LOINC",
@@ -196,7 +196,7 @@
           },
           {
             "INVALID_REASON_CAPTION": "Unknown",
-            "CONCEPT_ID": 4.587944E7,
+            "CONCEPT_ID": 45879438,
             "STANDARD_CONCEPT": null,
             "CONCEPT_CODE": "LA9633-4",
             "VOCABULARY_ID": "LOINC",
@@ -276,7 +276,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587799E7,
+                      "CONCEPT_ID": 45877985,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11882-0",
                       "VOCABULARY_ID": "LOINC",
@@ -300,7 +300,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588408E7,
+                      "CONCEPT_ID": 45884084,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6576-8",
                       "VOCABULARY_ID": "LOINC",
@@ -324,7 +324,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587944E7,
+                      "CONCEPT_ID": 45879438,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9633-4",
                       "VOCABULARY_ID": "LOINC",
@@ -411,7 +411,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587858E7,
+                      "CONCEPT_ID": 45878583,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6577-6",
                       "VOCABULARY_ID": "LOINC",
@@ -423,7 +423,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.58803E7,
+                      "CONCEPT_ID": 45880296,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11883-8",
                       "VOCABULARY_ID": "LOINC",
@@ -435,7 +435,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588409E7,
+                      "CONCEPT_ID": 45884086,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9634-2",
                       "VOCABULARY_ID": "LOINC",

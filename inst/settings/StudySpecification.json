@@ -4,11 +4,11 @@
   "description": "Cohort diagnostics on Covid Phenotyping.",
   "version": "v0.1.0",
   "skeletonVersion": "v0.0.1",
-  "createdDate": 18906,
+  "createdDate": 18908,
   "createdBy": "rao@ohdsi.org",
   "cohortDefinitions": [
     {
-      "createdDate": 1.632341E9,
+      "createdDate": 1632341145.2730000019073,
       "expression": {
         "ExpressionLimit": {"Type": "First"},
         "CollapseSettings": {
@@ -23,7 +23,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -40,7 +40,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -80,7 +80,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -167,7 +167,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587799E7,
+                  "CONCEPT_ID": 45877985,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA11882-0",
                   "VOCABULARY_ID": "LOINC",
@@ -191,7 +191,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.588408E7,
+                  "CONCEPT_ID": 45884084,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA6576-8",
                   "VOCABULARY_ID": "LOINC",
@@ -215,7 +215,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587944E7,
+                  "CONCEPT_ID": 45879438,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA9633-4",
                   "VOCABULARY_ID": "LOINC",
@@ -240,13 +240,199 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632341E9,
+      "logicDescription": "COVID-19 diagnosis or SARS-CoV-2 test (1pos) (3Ps, 7Era) - first occurrence",
+      "modifiedDate": 1632341145.2730000019073,
       "name": "COVID-19 diagnosis or SARS-CoV-2 test (1pos) (3Ps, 7Era) - first occurrence",
       "id": 2
     },
     {
-      "createdDate": 1.63347E9,
+      "createdDate": 1632476274.6970000267029,
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {},
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 756055,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "OMOP4873969",
+                "VOCABULARY_ID": "OMOP Extension",
+                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Lab Test",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37310258,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "1240461000000109",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 antibody",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Procedure",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 704059,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "U0003",
+                "VOCABULARY_ID": "HCPCS",
+                "CONCEPT_NAME": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique, making use of high throughput technologies as described by CMS-2020-01-R",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "HCPCS",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 704058,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "U0004",
+                "VOCABULARY_ID": "HCPCS",
+                "CONCEPT_NAME": "2019-nCoV Coronavirus, SARS-CoV-2/2019-nCoV (COVID-19), any technique, multiple types or subtypes (includes all targets), non-CDC, making use of high throughput technologies as described by CMS-2020-01-R",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "HCPCS",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "SARS-CoV-2 test",
+          "id": 5
+        }],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 0
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"Measurement": {
+            "MeasurementTypeExclude": false,
+            "ValueAsConcept": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4126681,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "260373001",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Detected",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45877985,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA11882-0",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Detected",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9191,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "10828004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Positive",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45884084,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA6576-8",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Positive",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4181412,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "52101004",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Present",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45879438,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA9633-4",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Present",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "CodesetId": 5,
+            "OccurrenceStartDate": {
+              "Op": "gt",
+              "Value": "2019-12-01"
+            }
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "logicDescription": "SARS-CoV-2 test positive result - events",
+      "modifiedDate": 1632476274.6970000267029,
+      "name": "SARS-CoV-2 test positive result - events",
+      "id": 51
+    },
+    {
+      "createdDate": 1633470319.2219998836517,
       "expression": {
         "ExpressionLimit": {"Type": "First"},
         "CollapseSettings": {
@@ -261,7 +447,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -278,7 +464,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -318,7 +504,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -408,7 +594,7 @@
                   },
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.587799E7,
+                    "CONCEPT_ID": 45877985,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA11882-0",
                     "VOCABULARY_ID": "LOINC",
@@ -432,7 +618,7 @@
                   },
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.588408E7,
+                    "CONCEPT_ID": 45884084,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA6576-8",
                     "VOCABULARY_ID": "LOINC",
@@ -456,7 +642,7 @@
                   },
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.587944E7,
+                    "CONCEPT_ID": 45879438,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA9633-4",
                     "VOCABULARY_ID": "LOINC",
@@ -501,13 +687,211 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.63347E9,
+      "logicDescription": "COVID-19 diagnosis with no SARS-CoV-2 test prior (3Ps, 7Era) - first occurrence",
+      "modifiedDate": 1633470319.2219998836517,
       "name": "COVID-19 diagnosis with no SARS-CoV-2 test prior (3Ps, 7Era) - first occurrence",
       "id": 59
     },
     {
-      "createdDate": 1.632505E9,
+      "createdDate": 1632476331.8619999885559,
+      "expression": {
+        "ExpressionLimit": {"Type": "All"},
+        "CollapseSettings": {
+          "CollapseType": "ERA",
+          "EraPad": 0
+        },
+        "CensorWindow": {},
+        "ConceptSets": [{
+          "expression": {"items": [
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 756055,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "OMOP4873969",
+                "VOCABULARY_ID": "OMOP Extension",
+                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Lab Test",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": true,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 37310258,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "1240461000000109",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 antibody",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Procedure",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 704059,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "U0003",
+                "VOCABULARY_ID": "HCPCS",
+                "CONCEPT_NAME": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique, making use of high throughput technologies as described by CMS-2020-01-R",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "HCPCS",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            },
+            {
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Valid",
+                "CONCEPT_ID": 704058,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "U0004",
+                "VOCABULARY_ID": "HCPCS",
+                "CONCEPT_NAME": "2019-nCoV Coronavirus, SARS-CoV-2/2019-nCoV (COVID-19), any technique, multiple types or subtypes (includes all targets), non-CDC, making use of high throughput technologies as described by CMS-2020-01-R",
+                "DOMAIN_ID": "Measurement",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "HCPCS",
+                "INVALID_REASON": "V"
+              },
+              "includeMapped": false,
+              "includeDescendants": true
+            }
+          ]},
+          "name": "SARS-CoV-2 test",
+          "id": 5
+        }],
+        "EndStrategy": {"DateOffset": {
+          "DateField": "StartDate",
+          "Offset": 0
+        }},
+        "cdmVersionRange": ">=5.0.0",
+        "CensoringCriteria": [],
+        "QualifiedLimit": {"Type": "First"},
+        "InclusionRules": [],
+        "PrimaryCriteria": {
+          "CriteriaList": [{"Measurement": {
+            "MeasurementTypeExclude": false,
+            "ValueAsConcept": [
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9189,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "260385009",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Negative",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 9190,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "260415000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Not detected",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 3661867,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "895231008",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Not detected in pooled specimen",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 4132135,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "2667000",
+                "VOCABULARY_ID": "SNOMED",
+                "CONCEPT_NAME": "Absent",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45878583,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA6577-6",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Negative",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45880296,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA11883-8",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Not detected",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              },
+              {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 45884086,
+                "STANDARD_CONCEPT": null,
+                "CONCEPT_CODE": "LA9634-2",
+                "VOCABULARY_ID": "LOINC",
+                "CONCEPT_NAME": "Absent",
+                "DOMAIN_ID": "Meas Value",
+                "STANDARD_CONCEPT_CAPTION": "Unknown",
+                "CONCEPT_CLASS_ID": null,
+                "INVALID_REASON": null
+              }
+            ],
+            "CodesetId": 5,
+            "OccurrenceStartDate": {
+              "Op": "gt",
+              "Value": "2019-12-01"
+            }
+          }}],
+          "PrimaryCriteriaLimit": {"Type": "All"},
+          "ObservationWindow": {
+            "PostDays": 0,
+            "PriorDays": 0
+          }
+        }
+      },
+      "logicDescription": "SARS-CoV-2 test negative result - events",
+      "modifiedDate": 1632476331.8619999885559,
+      "name": "SARS-CoV-2 test negative result - events",
+      "id": 52
+    },
+    {
+      "createdDate": 1632505490.2060000896454,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -522,7 +906,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -539,7 +923,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -579,7 +963,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -694,7 +1078,7 @@
                   "ValueAsConcept": [
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587799E7,
+                      "CONCEPT_ID": 45877985,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11882-0",
                       "VOCABULARY_ID": "LOINC",
@@ -718,7 +1102,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588408E7,
+                      "CONCEPT_ID": 45884084,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6576-8",
                       "VOCABULARY_ID": "LOINC",
@@ -742,7 +1126,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587944E7,
+                      "CONCEPT_ID": 45879438,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9633-4",
                       "VOCABULARY_ID": "LOINC",
@@ -837,7 +1221,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587858E7,
+                      "CONCEPT_ID": 45878583,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6577-6",
                       "VOCABULARY_ID": "LOINC",
@@ -849,7 +1233,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.58803E7,
+                      "CONCEPT_ID": 45880296,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11883-8",
                       "VOCABULARY_ID": "LOINC",
@@ -861,7 +1245,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588409E7,
+                      "CONCEPT_ID": 45884086,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9634-2",
                       "VOCABULARY_ID": "LOINC",
@@ -915,13 +1299,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632505E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (1pos, 1neg) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632505490.2060000896454,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (1pos, 1neg) within 3d (3Ps, 7Era)",
       "id": 53
     },
     {
-      "createdDate": 1.632511E9,
+      "createdDate": 1632511016.8800001144409,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -936,7 +1320,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -953,7 +1337,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -993,7 +1377,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -1050,7 +1434,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.353071E7,
+                  "CONCEPT_ID": 43530714,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "2611000119103",
                   "VOCABULARY_ID": "SNOMED",
@@ -1147,7 +1531,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -1322,7 +1706,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311059,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840546002",
                   "VOCABULARY_ID": "SNOMED",
@@ -1339,7 +1723,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.576558E7,
+                  "CONCEPT_ID": 45765578,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "702547000",
                   "VOCABULARY_ID": "SNOMED",
@@ -1361,7 +1745,7 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.70162E7,
+                "CONCEPT_ID": 37016200,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "150781000119103",
                 "VOCABULARY_ID": "SNOMED",
@@ -1434,7 +1818,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.720509E7,
+                  "CONCEPT_ID": 37205085,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "784372002",
                   "VOCABULARY_ID": "SNOMED",
@@ -1519,7 +1903,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.701687E7,
+                  "CONCEPT_ID": 37016869,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "713014002",
                   "VOCABULARY_ID": "SNOMED",
@@ -1672,7 +2056,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.739718E7,
+                  "CONCEPT_ID": 37397178,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "717231003",
                   "VOCABULARY_ID": "SNOMED",
@@ -1689,7 +2073,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.049347E7,
+                  "CONCEPT_ID": 40493465,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "449129007",
                   "VOCABULARY_ID": "SNOMED",
@@ -1723,7 +2107,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.478443E7,
+                  "CONCEPT_ID": 44784428,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "698579002",
                   "VOCABULARY_ID": "SNOMED",
@@ -1740,7 +2124,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.478443E7,
+                  "CONCEPT_ID": 44784427,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "698578005",
                   "VOCABULARY_ID": "SNOMED",
@@ -1757,7 +2141,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.478443E7,
+                  "CONCEPT_ID": 44784429,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "698581000",
                   "VOCABULARY_ID": "SNOMED",
@@ -1774,7 +2158,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.478248E7,
+                  "CONCEPT_ID": 44782483,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "698580004",
                   "VOCABULARY_ID": "SNOMED",
@@ -1791,7 +2175,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.353065E7,
+                  "CONCEPT_ID": 43530646,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "123471000119103",
                   "VOCABULARY_ID": "SNOMED",
@@ -1859,7 +2243,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.353064E7,
+                  "CONCEPT_ID": 43530637,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "130091000119103",
                   "VOCABULARY_ID": "SNOMED",
@@ -1876,7 +2260,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.701746E7,
+                  "CONCEPT_ID": 37017455,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "713731001",
                   "VOCABULARY_ID": "SNOMED",
@@ -2262,7 +2646,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.739681E7,
+                  "CONCEPT_ID": 37396808,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "716749005",
                   "VOCABULARY_ID": "SNOMED",
@@ -2313,7 +2697,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.720505E7,
+                  "CONCEPT_ID": 37205051,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "784317004",
                   "VOCABULARY_ID": "SNOMED",
@@ -2330,7 +2714,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.720505E7,
+                  "CONCEPT_ID": 37205052,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "784318009",
                   "VOCABULARY_ID": "SNOMED",
@@ -2347,7 +2731,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.577272E7,
+                  "CONCEPT_ID": 45772721,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "704369007",
                   "VOCABULARY_ID": "SNOMED",
@@ -2381,7 +2765,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.048461E7,
+                  "CONCEPT_ID": 40484614,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "444042007",
                   "VOCABULARY_ID": "SNOMED",
@@ -2432,7 +2816,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 4.478275E7,
+                  "CONCEPT_ID": 44782753,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "148871000119109",
                   "VOCABULARY_ID": "SNOMED",
@@ -2584,7 +2968,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -2800,7 +3184,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587799E7,
+                  "CONCEPT_ID": 45877985,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA11882-0",
                   "VOCABULARY_ID": "LOINC",
@@ -2824,7 +3208,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.588408E7,
+                  "CONCEPT_ID": 45884084,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA6576-8",
                   "VOCABULARY_ID": "LOINC",
@@ -2848,7 +3232,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587944E7,
+                  "CONCEPT_ID": 45879438,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA9633-4",
                   "VOCABULARY_ID": "LOINC",
@@ -2873,397 +3257,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632511E9,
+      "logicDescription": "COVID-19 diagnosis or SARS-CoV-2 test (1pos) (3Ps, 7Era)",
+      "modifiedDate": 1632511016.8800001144409,
       "name": "COVID-19 diagnosis or SARS-CoV-2 test (1pos) (3Ps, 7Era)",
       "id": 55
     },
     {
-      "createdDate": 1.632476E9,
-      "expression": {
-        "ExpressionLimit": {"Type": "All"},
-        "CollapseSettings": {
-          "CollapseType": "ERA",
-          "EraPad": 0
-        },
-        "CensorWindow": {},
-        "ConceptSets": [{
-          "expression": {"items": [
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 756055,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "OMOP4873969",
-                "VOCABULARY_ID": "OMOP Extension",
-                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": true,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731026E7,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1240461000000109",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 antibody",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Procedure",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 704059,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "U0003",
-                "VOCABULARY_ID": "HCPCS",
-                "CONCEPT_NAME": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique, making use of high throughput technologies as described by CMS-2020-01-R",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "HCPCS",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 704058,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "U0004",
-                "VOCABULARY_ID": "HCPCS",
-                "CONCEPT_NAME": "2019-nCoV Coronavirus, SARS-CoV-2/2019-nCoV (COVID-19), any technique, multiple types or subtypes (includes all targets), non-CDC, making use of high throughput technologies as described by CMS-2020-01-R",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "HCPCS",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            }
-          ]},
-          "name": "SARS-CoV-2 test",
-          "id": 5
-        }],
-        "EndStrategy": {"DateOffset": {
-          "DateField": "EndDate",
-          "Offset": 1
-        }},
-        "cdmVersionRange": ">=5.0.0",
-        "CensoringCriteria": [],
-        "QualifiedLimit": {"Type": "First"},
-        "InclusionRules": [],
-        "PrimaryCriteria": {
-          "CriteriaList": [{"Measurement": {
-            "MeasurementTypeExclude": false,
-            "ValueAsConcept": [
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4126681,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "260373001",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Detected",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587799E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA11882-0",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Detected",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 9191,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "10828004",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Positive",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.588408E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA6576-8",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Positive",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4181412,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "52101004",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Present",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587944E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA9633-4",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Present",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              }
-            ],
-            "CodesetId": 5,
-            "OccurrenceStartDate": {
-              "Op": "gt",
-              "Value": "2019-12-01"
-            }
-          }}],
-          "PrimaryCriteriaLimit": {"Type": "All"},
-          "ObservationWindow": {
-            "PostDays": 0,
-            "PriorDays": 0
-          }
-        }
-      },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
-      "name": "SARS-CoV-2 test positive result - events",
-      "id": 51
-    },
-    {
-      "createdDate": 1.632476E9,
-      "expression": {
-        "ExpressionLimit": {"Type": "All"},
-        "CollapseSettings": {
-          "CollapseType": "ERA",
-          "EraPad": 0
-        },
-        "CensorWindow": {},
-        "ConceptSets": [{
-          "expression": {"items": [
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 756055,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "OMOP4873969",
-                "VOCABULARY_ID": "OMOP Extension",
-                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": true,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731026E7,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "1240461000000109",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Measurement of Severe acute respiratory syndrome coronavirus 2 antibody",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Procedure",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 704059,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "U0003",
-                "VOCABULARY_ID": "HCPCS",
-                "CONCEPT_NAME": "Infectious agent detection by nucleic acid (DNA or RNA); severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) (Coronavirus disease [COVID-19]), amplified probe technique, making use of high throughput technologies as described by CMS-2020-01-R",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "HCPCS",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            },
-            {
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 704058,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "U0004",
-                "VOCABULARY_ID": "HCPCS",
-                "CONCEPT_NAME": "2019-nCoV Coronavirus, SARS-CoV-2/2019-nCoV (COVID-19), any technique, multiple types or subtypes (includes all targets), non-CDC, making use of high throughput technologies as described by CMS-2020-01-R",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "HCPCS",
-                "INVALID_REASON": "V"
-              },
-              "includeMapped": false,
-              "includeDescendants": true
-            }
-          ]},
-          "name": "SARS-CoV-2 test",
-          "id": 5
-        }],
-        "EndStrategy": {"DateOffset": {
-          "DateField": "StartDate",
-          "Offset": 1
-        }},
-        "cdmVersionRange": ">=5.0.0",
-        "CensoringCriteria": [],
-        "QualifiedLimit": {"Type": "First"},
-        "InclusionRules": [],
-        "PrimaryCriteria": {
-          "CriteriaList": [{"Measurement": {
-            "MeasurementTypeExclude": false,
-            "ValueAsConcept": [
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 9189,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "260385009",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Negative",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 9190,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "260415000",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Not detected",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3661867,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "895231008",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Not detected in pooled specimen",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4132135,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "2667000",
-                "VOCABULARY_ID": "SNOMED",
-                "CONCEPT_NAME": "Absent",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587858E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA6577-6",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Negative",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.58803E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA11883-8",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Not detected",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              },
-              {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.588409E7,
-                "STANDARD_CONCEPT": null,
-                "CONCEPT_CODE": "LA9634-2",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Absent",
-                "DOMAIN_ID": "Meas Value",
-                "STANDARD_CONCEPT_CAPTION": "Unknown",
-                "CONCEPT_CLASS_ID": null,
-                "INVALID_REASON": null
-              }
-            ],
-            "CodesetId": 5,
-            "OccurrenceStartDate": {
-              "Op": "gt",
-              "Value": "2019-12-01"
-            }
-          }}],
-          "PrimaryCriteriaLimit": {"Type": "All"},
-          "ObservationWindow": {
-            "PostDays": 0,
-            "PriorDays": 0
-          }
-        }
-      },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
-      "name": "SARS-CoV-2 test negative result - events",
-      "id": 52
-    },
-    {
-      "createdDate": 1.633401E9,
+      "createdDate": 1633400600.2339999675751,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -3294,7 +3294,7 @@
               "isExcluded": true,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731026E7,
+                "CONCEPT_ID": 37310258,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "1240461000000109",
                 "VOCABULARY_ID": "SNOMED",
@@ -3371,7 +3371,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587799E7,
+                "CONCEPT_ID": 45877985,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA11882-0",
                 "VOCABULARY_ID": "LOINC",
@@ -3395,7 +3395,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.588408E7,
+                "CONCEPT_ID": 45884084,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA6576-8",
                 "VOCABULARY_ID": "LOINC",
@@ -3419,7 +3419,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587944E7,
+                "CONCEPT_ID": 45879438,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA9633-4",
                 "VOCABULARY_ID": "LOINC",
@@ -3443,13 +3443,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.633401E9,
+      "logicDescription": "SARS-CoV-2 test positive result (3Ps, 7Era)",
+      "modifiedDate": 1633400600.2339999675751,
       "name": "SARS-CoV-2 test positive result (3Ps, 7Era)",
       "id": 58
     },
     {
-      "createdDate": 1.632445E9,
+      "createdDate": 1632444698.239000082016,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -3463,7 +3463,7 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731106E7,
+                "CONCEPT_ID": 37311061,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "840539006",
                 "VOCABULARY_ID": "SNOMED",
@@ -3480,7 +3480,7 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731106E7,
+                "CONCEPT_ID": 37311061,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "840539006",
                 "VOCABULARY_ID": "SNOMED",
@@ -3521,13 +3521,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632445E9,
+      "logicDescription": "COVID-19 diagnosis (3Ps, 7Era)",
+      "modifiedDate": 1632444698.239000082016,
       "name": "COVID-19 diagnosis (3Ps, 7Era)",
       "id": 44
     },
     {
-      "createdDate": 1.632424E9,
+      "createdDate": 1632423639.3310000896454,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -3540,7 +3540,7 @@
             "isExcluded": false,
             "concept": {
               "INVALID_REASON_CAPTION": "Valid",
-              "CONCEPT_ID": 3.731106E7,
+              "CONCEPT_ID": 37311059,
               "STANDARD_CONCEPT": "S",
               "CONCEPT_CODE": "840546002",
               "VOCABULARY_ID": "SNOMED",
@@ -3576,13 +3576,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632424E9,
+      "logicDescription": "Exposure to SARS-Cov 2 (7dPe, 30dEra)",
+      "modifiedDate": 1632423639.3310000896454,
       "name": "Exposure to SARS-Cov 2 (7dPe, 30dEra)",
       "id": 17
     },
     {
-      "createdDate": 1.632424E9,
+      "createdDate": 1632423586.835000038147,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -3596,7 +3596,7 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731106E7,
+                "CONCEPT_ID": 37311059,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "840546002",
                 "VOCABULARY_ID": "SNOMED",
@@ -3613,7 +3613,7 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 4.576558E7,
+                "CONCEPT_ID": 45765578,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "702547000",
                 "VOCABULARY_ID": "SNOMED",
@@ -3650,13 +3650,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632424E9,
+      "logicDescription": "Exposure to SARS-Cov 2 and coronavirus (7dPe, 30dEra)",
+      "modifiedDate": 1632423586.835000038147,
       "name": "Exposure to SARS-Cov 2 and coronavirus (7dPe, 30dEra)",
       "id": 16
     },
     {
-      "createdDate": 1.632476E9,
+      "createdDate": 1632475829.9159998893738,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -3671,7 +3671,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -3688,7 +3688,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -3728,7 +3728,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -3843,7 +3843,7 @@
                   "ValueAsConcept": [
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587799E7,
+                      "CONCEPT_ID": 45877985,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11882-0",
                       "VOCABULARY_ID": "LOINC",
@@ -3867,7 +3867,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588408E7,
+                      "CONCEPT_ID": 45884084,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6576-8",
                       "VOCABULARY_ID": "LOINC",
@@ -3891,7 +3891,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587944E7,
+                      "CONCEPT_ID": 45879438,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9633-4",
                       "VOCABULARY_ID": "LOINC",
@@ -3998,7 +3998,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587858E7,
+                      "CONCEPT_ID": 45878583,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6577-6",
                       "VOCABULARY_ID": "LOINC",
@@ -4010,7 +4010,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.58803E7,
+                      "CONCEPT_ID": 45880296,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11883-8",
                       "VOCABULARY_ID": "LOINC",
@@ -4022,7 +4022,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588409E7,
+                      "CONCEPT_ID": 45884086,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9634-2",
                       "VOCABULARY_ID": "LOINC",
@@ -4064,13 +4064,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (0pos, 1neg) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632475829.9159998893738,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (0pos, 1neg) within 3d (3Ps, 7Era)",
       "id": 48
     },
     {
-      "createdDate": 1.632476E9,
+      "createdDate": 1632476215.4849998950958,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -4085,7 +4085,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4102,7 +4102,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4142,7 +4142,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -4305,7 +4305,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587858E7,
+                      "CONCEPT_ID": 45878583,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6577-6",
                       "VOCABULARY_ID": "LOINC",
@@ -4317,7 +4317,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.58803E7,
+                      "CONCEPT_ID": 45880296,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11883-8",
                       "VOCABULARY_ID": "LOINC",
@@ -4329,7 +4329,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588409E7,
+                      "CONCEPT_ID": 45884086,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9634-2",
                       "VOCABULARY_ID": "LOINC",
@@ -4371,13 +4371,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (1neg) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632476215.4849998950958,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (1neg) within 3d (3Ps, 7Era)",
       "id": 50
     },
     {
-      "createdDate": 1.632445E9,
+      "createdDate": 1632444749.9949998855591,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -4392,7 +4392,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4409,7 +4409,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4449,7 +4449,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -4557,13 +4557,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632445E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (irrespective of results) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632444749.9949998855591,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (irrespective of results) within 3d (3Ps, 7Era)",
       "id": 45
     },
     {
-      "createdDate": 1.632475E9,
+      "createdDate": 1632475472.9849998950958,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -4578,7 +4578,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4595,7 +4595,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4635,7 +4635,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -4716,7 +4716,7 @@
                 "ValueAsConcept": [
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.587799E7,
+                    "CONCEPT_ID": 45877985,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA11882-0",
                     "VOCABULARY_ID": "LOINC",
@@ -4740,7 +4740,7 @@
                   },
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.588408E7,
+                    "CONCEPT_ID": 45884084,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA6576-8",
                     "VOCABULARY_ID": "LOINC",
@@ -4764,7 +4764,7 @@
                   },
                   {
                     "INVALID_REASON_CAPTION": "Unknown",
-                    "CONCEPT_ID": 4.587944E7,
+                    "CONCEPT_ID": 45879438,
                     "STANDARD_CONCEPT": null,
                     "CONCEPT_CODE": "LA9633-4",
                     "VOCABULARY_ID": "LOINC",
@@ -4817,13 +4817,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632475E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (1pos) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632475472.9849998950958,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (1pos) within 3d (3Ps, 7Era)",
       "id": 46
     },
     {
-      "createdDate": 1.632476E9,
+      "createdDate": 1632476166.414999961853,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -4838,7 +4838,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4855,7 +4855,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -4895,7 +4895,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -5010,7 +5010,7 @@
                   "ValueAsConcept": [
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587799E7,
+                      "CONCEPT_ID": 45877985,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11882-0",
                       "VOCABULARY_ID": "LOINC",
@@ -5034,7 +5034,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588408E7,
+                      "CONCEPT_ID": 45884084,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6576-8",
                       "VOCABULARY_ID": "LOINC",
@@ -5058,7 +5058,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587944E7,
+                      "CONCEPT_ID": 45879438,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9633-4",
                       "VOCABULARY_ID": "LOINC",
@@ -5165,7 +5165,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587858E7,
+                      "CONCEPT_ID": 45878583,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6577-6",
                       "VOCABULARY_ID": "LOINC",
@@ -5177,7 +5177,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.58803E7,
+                      "CONCEPT_ID": 45880296,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11883-8",
                       "VOCABULARY_ID": "LOINC",
@@ -5189,7 +5189,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588409E7,
+                      "CONCEPT_ID": 45884086,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9634-2",
                       "VOCABULARY_ID": "LOINC",
@@ -5231,13 +5231,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (1pos, 0neg) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632476166.414999961853,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (1pos, 0neg) within 3d (3Ps, 7Era)",
       "id": 49
     },
     {
-      "createdDate": 1.632476E9,
+      "createdDate": 1632475806.864000082016,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -5252,7 +5252,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -5269,7 +5269,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -5309,7 +5309,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -5424,7 +5424,7 @@
                   "ValueAsConcept": [
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587799E7,
+                      "CONCEPT_ID": 45877985,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA11882-0",
                       "VOCABULARY_ID": "LOINC",
@@ -5448,7 +5448,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.588408E7,
+                      "CONCEPT_ID": 45884084,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA6576-8",
                       "VOCABULARY_ID": "LOINC",
@@ -5472,7 +5472,7 @@
                     },
                     {
                       "INVALID_REASON_CAPTION": "Unknown",
-                      "CONCEPT_ID": 4.587944E7,
+                      "CONCEPT_ID": 45879438,
                       "STANDARD_CONCEPT": null,
                       "CONCEPT_CODE": "LA9633-4",
                       "VOCABULARY_ID": "LOINC",
@@ -5526,13 +5526,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632476E9,
+      "logicDescription": "COVID-19 diagnosis and SARS-CoV-2 test (0pos) within 3d (3Ps, 7Era)",
+      "modifiedDate": 1632475806.864000082016,
       "name": "COVID-19 diagnosis and SARS-CoV-2 test (0pos) within 3d (3Ps, 7Era)",
       "id": 47
     },
     {
-      "createdDate": 1.632964E9,
+      "createdDate": 1632964268.2070000171661,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -5547,7 +5547,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -5564,7 +5564,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -5604,7 +5604,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -5683,7 +5683,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587799E7,
+                  "CONCEPT_ID": 45877985,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA11882-0",
                   "VOCABULARY_ID": "LOINC",
@@ -5707,7 +5707,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.588408E7,
+                  "CONCEPT_ID": 45884084,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA6576-8",
                   "VOCABULARY_ID": "LOINC",
@@ -5731,7 +5731,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587944E7,
+                  "CONCEPT_ID": 45879438,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA9633-4",
                   "VOCABULARY_ID": "LOINC",
@@ -5811,7 +5811,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587799E7,
+                            "CONCEPT_ID": 45877985,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA11882-0",
                             "VOCABULARY_ID": "LOINC",
@@ -5835,7 +5835,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.588408E7,
+                            "CONCEPT_ID": 45884084,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA6576-8",
                             "VOCABULARY_ID": "LOINC",
@@ -5859,7 +5859,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587944E7,
+                            "CONCEPT_ID": 45879438,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA9633-4",
                             "VOCABULARY_ID": "LOINC",
@@ -5946,7 +5946,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587858E7,
+                            "CONCEPT_ID": 45878583,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA6577-6",
                             "VOCABULARY_ID": "LOINC",
@@ -5958,7 +5958,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.58803E7,
+                            "CONCEPT_ID": 45880296,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA11883-8",
                             "VOCABULARY_ID": "LOINC",
@@ -5970,7 +5970,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.588409E7,
+                            "CONCEPT_ID": 45884086,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA9634-2",
                             "VOCABULARY_ID": "LOINC",
@@ -6010,13 +6010,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632964E9,
+      "logicDescription": "SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (0neg or 1pos) 3d (3Ps, 7Era)",
+      "modifiedDate": 1632964268.2070000171661,
       "name": "SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (0neg or 1pos) 3d (3Ps, 7Era)",
       "id": 57
     },
     {
-      "createdDate": 1.632963E9,
+      "createdDate": 1632962558.4260001182556,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -6031,7 +6031,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -6048,7 +6048,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -6088,7 +6088,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -6167,7 +6167,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587799E7,
+                  "CONCEPT_ID": 45877985,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA11882-0",
                   "VOCABULARY_ID": "LOINC",
@@ -6191,7 +6191,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.588408E7,
+                  "CONCEPT_ID": 45884084,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA6576-8",
                   "VOCABULARY_ID": "LOINC",
@@ -6215,7 +6215,7 @@
                 },
                 {
                   "INVALID_REASON_CAPTION": "Unknown",
-                  "CONCEPT_ID": 4.587944E7,
+                  "CONCEPT_ID": 45879438,
                   "STANDARD_CONCEPT": null,
                   "CONCEPT_CODE": "LA9633-4",
                   "VOCABULARY_ID": "LOINC",
@@ -6295,7 +6295,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587799E7,
+                            "CONCEPT_ID": 45877985,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA11882-0",
                             "VOCABULARY_ID": "LOINC",
@@ -6319,7 +6319,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.588408E7,
+                            "CONCEPT_ID": 45884084,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA6576-8",
                             "VOCABULARY_ID": "LOINC",
@@ -6343,7 +6343,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587944E7,
+                            "CONCEPT_ID": 45879438,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA9633-4",
                             "VOCABULARY_ID": "LOINC",
@@ -6430,7 +6430,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.587858E7,
+                            "CONCEPT_ID": 45878583,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA6577-6",
                             "VOCABULARY_ID": "LOINC",
@@ -6442,7 +6442,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.58803E7,
+                            "CONCEPT_ID": 45880296,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA11883-8",
                             "VOCABULARY_ID": "LOINC",
@@ -6454,7 +6454,7 @@
                           },
                           {
                             "INVALID_REASON_CAPTION": "Unknown",
-                            "CONCEPT_ID": 4.588409E7,
+                            "CONCEPT_ID": 45884086,
                             "STANDARD_CONCEPT": null,
                             "CONCEPT_CODE": "LA9634-2",
                             "VOCABULARY_ID": "LOINC",
@@ -6494,13 +6494,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632963E9,
+      "logicDescription": "SARS-CoV-2 test (1pos) or COVID-19 diagnosis with ((0neg or 1pos) or no test) 3d (3Ps, 7Era)",
+      "modifiedDate": 1632962558.4260001182556,
       "name": "SARS-CoV-2 test (1pos) or COVID-19 diagnosis with ((0neg or 1pos) or no test) 3d (3Ps, 7Era)",
       "id": 56
     },
     {
-      "createdDate": 1.632425E9,
+      "createdDate": 1632425132.5639998912811,
       "expression": {
         "ExpressionLimit": {"Type": "All"},
         "CollapseSettings": {
@@ -6531,7 +6531,7 @@
               "isExcluded": true,
               "concept": {
                 "INVALID_REASON_CAPTION": "Valid",
-                "CONCEPT_ID": 3.731026E7,
+                "CONCEPT_ID": 37310258,
                 "STANDARD_CONCEPT": "S",
                 "CONCEPT_CODE": "1240461000000109",
                 "VOCABULARY_ID": "SNOMED",
@@ -6602,13 +6602,13 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.632425E9,
+      "logicDescription": "SARS-CoV-2 testing - events",
+      "modifiedDate": 1632425132.5639998912811,
       "name": "SARS-CoV-2 testing - events",
       "id": 22
     },
     {
-      "createdDate": 1.633471E9,
+      "createdDate": 1633470525.3150000572205,
       "expression": {
         "ExpressionLimit": {"Type": "First"},
         "CollapseSettings": {
@@ -6623,7 +6623,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -6640,7 +6640,7 @@
                 "isExcluded": false,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731106E7,
+                  "CONCEPT_ID": 37311061,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "840539006",
                   "VOCABULARY_ID": "SNOMED",
@@ -6680,7 +6680,7 @@
                 "isExcluded": true,
                 "concept": {
                   "INVALID_REASON_CAPTION": "Valid",
-                  "CONCEPT_ID": 3.731026E7,
+                  "CONCEPT_ID": 37310258,
                   "STANDARD_CONCEPT": "S",
                   "CONCEPT_CODE": "1240461000000109",
                   "VOCABULARY_ID": "SNOMED",
@@ -6787,7 +6787,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587799E7,
+                "CONCEPT_ID": 45877985,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA11882-0",
                 "VOCABULARY_ID": "LOINC",
@@ -6811,7 +6811,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.588408E7,
+                "CONCEPT_ID": 45884084,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA6576-8",
                 "VOCABULARY_ID": "LOINC",
@@ -6835,7 +6835,7 @@
               },
               {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 4.587944E7,
+                "CONCEPT_ID": 45879438,
                 "STANDARD_CONCEPT": null,
                 "CONCEPT_CODE": "LA9633-4",
                 "VOCABULARY_ID": "LOINC",
@@ -6859,14 +6859,14 @@
           }
         }
       },
-      "logicDescription": null,
-      "modifiedDate": 1.633471E9,
+      "logicDescription": "SARS-CoV-2 positive test with no prior COVID-19 diagnosis (3Ps, 7Era) - first occurrence",
+      "modifiedDate": 1633470525.3150000572205,
       "name": "SARS-CoV-2 positive test with no prior COVID-19 diagnosis (3Ps, 7Era) - first occurrence",
       "id": 60
     }
   ],
   "name": "Covid-19 Phenotyping - an OHDSI network study",
-  "modifiedDate": 18906,
+  "modifiedDate": 18908,
   "modifiedBy": "rao@ohdsi.org",
   "id": 1,
   "packageName": "covidPhenotype"

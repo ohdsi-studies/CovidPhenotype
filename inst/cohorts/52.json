@@ -28,7 +28,7 @@
         "isExcluded": true,
         "concept": {
           "INVALID_REASON_CAPTION": "Valid",
-          "CONCEPT_ID": 3.731026E7,
+          "CONCEPT_ID": 37310258,
           "STANDARD_CONCEPT": "S",
           "CONCEPT_CODE": "1240461000000109",
           "VOCABULARY_ID": "SNOMED",
@@ -81,7 +81,7 @@
   }],
   "EndStrategy": {"DateOffset": {
     "DateField": "StartDate",
-    "Offset": 1
+    "Offset": 0
   }},
   "cdmVersionRange": ">=5.0.0",
   "CensoringCriteria": [],
@@ -141,7 +141,7 @@
         },
         {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 4.587858E7,
+          "CONCEPT_ID": 45878583,
           "STANDARD_CONCEPT": null,
           "CONCEPT_CODE": "LA6577-6",
           "VOCABULARY_ID": "LOINC",
@@ -153,7 +153,7 @@
         },
         {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 4.58803E7,
+          "CONCEPT_ID": 45880296,
           "STANDARD_CONCEPT": null,
           "CONCEPT_CODE": "LA11883-8",
           "VOCABULARY_ID": "LOINC",
@@ -165,7 +165,7 @@
         },
         {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 4.588409E7,
+          "CONCEPT_ID": 45884086,
           "STANDARD_CONCEPT": null,
           "CONCEPT_CODE": "LA9634-2",
           "VOCABULARY_ID": "LOINC",
