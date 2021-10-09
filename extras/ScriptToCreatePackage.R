@@ -24,26 +24,7 @@ ROhdsiWebApi::authorizeWebApi(baseUrl = baseUrl,
                               webApiUsername = keyring::key_get(service = "ohdsiAtlasPhenotypeUser"),
                               webApiPassword = keyring::key_get(service = "ohdsiAtlasPhenotypePassword"))
 studyCohorts <- ROhdsiWebApi::getCohortDefinitionsMetaData(baseUrl = baseUrl) %>% 
-  dplyr::filter(.data$id %in% c(2,
-                                16,
-                                17,
-                                22,
-                                44,
-                                45,
-                                46,
-                                47,
-                                48,
-                                49,
-                                50,
-                                51,
-                                52,
-                                53,
-                                55,
-                                56,
-                                57,
-                                58,
-                                59,
-                                60))
+  dplyr::filter(.data$id %in% c(55,58,56,84,85,45,59,60))
 
 
 

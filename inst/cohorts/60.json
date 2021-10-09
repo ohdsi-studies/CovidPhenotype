@@ -7,42 +7,23 @@
   "CensorWindow": {},
   "ConceptSets": [
     {
-      "expression": {"items": [
-        {
-          "isExcluded": false,
-          "concept": {
-            "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 37311061,
-            "STANDARD_CONCEPT": "S",
-            "CONCEPT_CODE": "840539006",
-            "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "Disease caused by severe acute respiratory syndrome coronavirus 2",
-            "DOMAIN_ID": "Condition",
-            "STANDARD_CONCEPT_CAPTION": "Standard",
-            "CONCEPT_CLASS_ID": "Clinical Finding",
-            "INVALID_REASON": "V"
-          },
-          "includeMapped": false,
-          "includeDescendants": true
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 37311061,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "840539006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "COVID-19",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
         },
-        {
-          "isExcluded": false,
-          "concept": {
-            "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 37311061,
-            "STANDARD_CONCEPT": "S",
-            "CONCEPT_CODE": "840539006",
-            "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "COVID-19",
-            "DOMAIN_ID": "Condition",
-            "STANDARD_CONCEPT_CAPTION": "Standard",
-            "CONCEPT_CLASS_ID": "Clinical Finding",
-            "INVALID_REASON": "V"
-          },
-          "includeMapped": false,
-          "includeDescendants": true
-        }
-      ]},
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
       "name": "COVID-19",
       "id": 4
     },
@@ -136,7 +117,7 @@
           "UseEventEnd": false,
           "Start": {"Coeff": -1},
           "End": {
-            "Days": 1,
+            "Days": 0,
             "Coeff": -1
           },
           "UseIndexEnd": false
@@ -241,7 +222,7 @@
         "Value": "2019-12-01"
       }
     }}],
-    "PrimaryCriteriaLimit": {"Type": "First"},
+    "PrimaryCriteriaLimit": {"Type": "All"},
     "ObservationWindow": {
       "PostDays": 0,
       "PriorDays": 0

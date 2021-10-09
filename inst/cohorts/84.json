@@ -2,47 +2,28 @@
   "ExpressionLimit": {"Type": "All"},
   "CollapseSettings": {
     "CollapseType": "ERA",
-    "EraPad": 7
+    "EraPad": 180
   },
   "CensorWindow": {},
   "ConceptSets": [
     {
-      "expression": {"items": [
-        {
-          "isExcluded": false,
-          "concept": {
-            "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 37311061,
-            "STANDARD_CONCEPT": "S",
-            "CONCEPT_CODE": "840539006",
-            "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "Disease caused by severe acute respiratory syndrome coronavirus 2",
-            "DOMAIN_ID": "Condition",
-            "STANDARD_CONCEPT_CAPTION": "Standard",
-            "CONCEPT_CLASS_ID": "Clinical Finding",
-            "INVALID_REASON": "V"
-          },
-          "includeMapped": false,
-          "includeDescendants": true
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Valid",
+          "CONCEPT_ID": 37311061,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "840539006",
+          "VOCABULARY_ID": "SNOMED",
+          "CONCEPT_NAME": "COVID-19",
+          "DOMAIN_ID": "Condition",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Clinical Finding",
+          "INVALID_REASON": "V"
         },
-        {
-          "isExcluded": false,
-          "concept": {
-            "INVALID_REASON_CAPTION": "Valid",
-            "CONCEPT_ID": 37311061,
-            "STANDARD_CONCEPT": "S",
-            "CONCEPT_CODE": "840539006",
-            "VOCABULARY_ID": "SNOMED",
-            "CONCEPT_NAME": "COVID-19",
-            "DOMAIN_ID": "Condition",
-            "STANDARD_CONCEPT_CAPTION": "Standard",
-            "CONCEPT_CLASS_ID": "Clinical Finding",
-            "INVALID_REASON": "V"
-          },
-          "includeMapped": false,
-          "includeDescendants": true
-        }
-      ]},
+        "includeMapped": false,
+        "includeDescendants": true
+      }]},
       "name": "COVID-19",
       "id": 4
     },
@@ -221,7 +202,7 @@
               "StartWindow": {
                 "UseEventEnd": false,
                 "Start": {
-                  "Days": 3,
+                  "Days": 0,
                   "Coeff": -1
                 },
                 "End": {
@@ -320,7 +301,7 @@
               "StartWindow": {
                 "UseEventEnd": false,
                 "Start": {
-                  "Days": 3,
+                  "Days": 0,
                   "Coeff": -1
                 },
                 "End": {
