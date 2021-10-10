@@ -104,7 +104,7 @@
   ],
   "EndStrategy": {"DateOffset": {
     "DateField": "StartDate",
-    "Offset": 3
+    "Offset": 21
   }},
   "cdmVersionRange": ">=5.0.0",
   "CensoringCriteria": [],

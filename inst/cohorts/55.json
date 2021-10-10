@@ -2,7 +2,7 @@
   "ExpressionLimit": {"Type": "All"},
   "CollapseSettings": {
     "CollapseType": "ERA",
-    "EraPad": 180
+    "EraPad": 21
   },
   "CensorWindow": {},
   "ConceptSets": [
