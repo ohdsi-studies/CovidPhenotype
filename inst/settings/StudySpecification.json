@@ -1828,9 +1828,9 @@
                 "CodesetId": 5
               }},
               "Occurrence": {
-                "Type": 2,
+                "Type": 0,
                 "IsDistinct": false,
-                "Count": 1
+                "Count": 0
               }
             }],
             "Type": "ALL",
