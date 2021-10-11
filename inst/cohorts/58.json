@@ -80,7 +80,7 @@
     "id": 5
   }],
   "EndStrategy": {"DateOffset": {
-    "DateField": "EndDate",
+    "DateField": "StartDate",
     "Offset": 3
   }},
   "cdmVersionRange": ">=5.0.0",
