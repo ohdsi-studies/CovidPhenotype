@@ -3,7 +3,7 @@ outputFolder <- "d:/temp/output"  # location where you study package will be cre
 
 
 ########## Please populate the information below #####################
-version <- "v0.1.0"
+version <- "v0.2.0"
 name <- "Covid-19 Phenotyping - an OHDSI network study"
 packageName <- "covidPhenotype"
 skeletonVersion <- "v0.0.1"
@@ -24,9 +24,8 @@ ROhdsiWebApi::authorizeWebApi(baseUrl = baseUrl,
                               webApiUsername = keyring::key_get(service = "ohdsiAtlasPhenotypeUser"),
                               webApiPassword = keyring::key_get(service = "ohdsiAtlasPhenotypePassword"))
 studyCohorts <- ROhdsiWebApi::getCohortDefinitionsMetaData(baseUrl = baseUrl) %>% 
-  dplyr::filter(.data$id %in% c(55,58,56,84,85,45,59,60))
-
-
+  dplyr::filter(.data$id %in% c(55,58,56,84,85,45,59,60,
+                                44,46,47,48))
 
 ################# end of user input ##############
 
