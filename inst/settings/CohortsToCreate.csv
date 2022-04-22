@@ -1,13 +1,18 @@
 atlasId,cohortId,id,cohortName
-59,59,59,"COVID-19 diagnosis with no SARS-CoV-2 test (3Ps, 21Era) (E)"
-46,46,46,"COVID-19 diagnosis and SARS-CoV-2 test (1pos) within 3d (3Pe, 7Era)"
+47,47,47,"COVID-19 diagnosis and SARS-CoV-2 test (1pos) (0neg) within 3d (3Pe, 21Era)"
 58,58,58,"SARS-CoV-2 test positive result (3Ps, 21Era)"
-47,47,47,"COVID-19 diagnosis and SARS-CoV-2 test (1pos) (0neg) within 3d (3Pe, 7Era)"
 48,48,48,"COVID-19 diagnosis and SARS-CoV-2 test (0pos upto 3d, 1neg within 3d) (3Pe, 7Era)"
 44,44,44,"COVID-19 diagnosis (3Pe, 7Era)"
 85,85,85,"SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (1pos or 0 neg 0d to 3d) (3Ps, 21Era)"
+46,46,46,"COVID-19 diagnosis and SARS-CoV-2 test (1pos) within 3d (3Pe, 21Era)"
+59,59,59,"COVID-19 diagnosis with no SARS-CoV-2 test (3Ps, 21Era)"
 45,45,45,"COVID-19 diagnosis with SARS-Cov-2 test (-3d to 3d) (3Pe, 21Era)"
 55,55,55,"COVID-19 diagnosis or SARS-CoV-2 test (1pos) (3Ps, 21Era)"
-60,60,60,"COVID-19 diagnosis with (0pos and 1 neg -3d to 3d) (3Ps, 21Era)"
-56,56,56,"SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (1pos or 0 neg -3d to 3d) (3Ps, 21Era)"
 84,84,84,"SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (1pos or 0 neg 0d to 3d) (3Ps, 180Era)"
+60,60,60,"SARS-CoV-2 test positive and negative result (0Ps, 0Era)"
+56,56,56,"SARS-CoV-2 test (1pos) or COVID-19 diagnosis with (0 neg -3d to 3d) (3Ps, 21Era)"
+184,184,184,[ACESO] Covid 1 - Testing with 365d prior observation time after 2020
+185,185,185,[ACESO] Covid 2 - Testing positive with 365d prior observation time after 2020
+186,186,186,[ACESO] Covid 3 - Testing positive or condition with 365d - after 2020
+187,187,187,[ACESO] Covid 4 - Testing positive or condition 2 with 365d - after 2020
+188,188,188,[ACESO] Covid 5 - Testing positive or no negative with 365d - after 2020

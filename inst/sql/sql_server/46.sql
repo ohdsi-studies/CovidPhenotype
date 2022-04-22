@@ -305,7 +305,7 @@ with cteEndDates (person_id, end_date) AS -- the magic
 (	
 	SELECT
 		person_id
-		, DATEADD(day,-1 * 7, event_date)  as end_date
+		, DATEADD(day,-1 * 21, event_date)  as end_date
 	FROM
 	(
 		SELECT
@@ -328,7 +328,7 @@ with cteEndDates (person_id, end_date) AS -- the magic
 
 			SELECT
 				person_id
-				, DATEADD(day,7,end_date) as end_date
+				, DATEADD(day,21,end_date) as end_date
 				, 1 AS event_type
 				, NULL
 			FROM #cohort_rows

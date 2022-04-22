@@ -2,7 +2,7 @@
   "ExpressionLimit": {"Type": "All"},
   "CollapseSettings": {
     "CollapseType": "ERA",
-    "EraPad": 7
+    "EraPad": 21
   },
   "CensorWindow": {},
   "ConceptSets": [
@@ -218,7 +218,10 @@
               "RestrictVisit": false,
               "StartWindow": {
                 "UseEventEnd": false,
-                "Start": {"Coeff": 1},
+                "Start": {
+                  "Days": 0,
+                  "Coeff": 1
+                },
                 "End": {
                   "Days": 3,
                   "Coeff": 1

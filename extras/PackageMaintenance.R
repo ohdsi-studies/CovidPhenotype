@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of covidPhenotype
 #
@@ -24,11 +24,11 @@ unlink("extras/UsingSkeletonPackage.pdf")
 shell("R CMD Rd2pdf ./ --output=extras/UsingSkeletonPackage.pdf")
 
 # Store environment in which the study was executed -----------------------
-# OhdsiRTools::createRenvLockFile(rootPackage = "covidPhenotype",
-#                                 additionalRequiredPackages = c('keyring', "checkmate","DatabaseConnector","clock","dplyr","DT",
-#                                                                "ggplot2","ggiraph","gtable","htmltools","lubridate",
-#                                                                "pool","purrr","scales","shiny","shinydashboard","shinyWidgets",
-#                                                                "stringr","SqlRender","tidyr", "plyr", "CirceR"))
+OhdsiRTools::createRenvLockFile(rootPackage = "covidPhenotype",
+                                mode = "description",
+                                ohdsiGitHubPackages = unique(c(OhdsiRTools::getOhdsiGitHubPackages(),
+                                                               "CohortGenerator")),
+                                includeRootPackage = FALSE)
 
 
 

@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of covidPhenotype
 #
@@ -62,16 +62,17 @@ execute <- function(connectionDetails,
                     vocabularyDatabaseSchema = cdmDatabaseSchema,
                     cohortDatabaseSchema = cdmDatabaseSchema,
                     cohortTable = "cohort",
-                    tempEmulationSchema = cohortDatabaseSchema,
+                    tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
                     verifyDependencies = TRUE,
                     outputFolder,
                     incrementalFolder = file.path(outputFolder, "incrementalFolder"),
                     databaseId = "Unknown",
                     databaseName = databaseId,
                     databaseDescription = databaseId) {
-  if (!file.exists(outputFolder))
+  if (!file.exists(outputFolder)) {
     dir.create(outputFolder, recursive = TRUE)
-  
+  }
+
   ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "log.txt"))
   ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, "errorReportR.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
@@ -79,56 +80,106 @@ execute <- function(connectionDetails,
     ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE),
     add = TRUE
   )
-  
+
   if (verifyDependencies) {
     ParallelLogger::logInfo("Checking whether correct package versions are installed")
     verifyDependencies()
   }
-  
+
   ParallelLogger::logInfo("Creating cohorts")
-  CohortDiagnostics::instantiateCohortSet(
+
+  cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable = cohortTable)
+
+  # Next create the tables on the database
+  CohortGenerator::createCohortTables(
     connectionDetails = connectionDetails,
-    cdmDatabaseSchema = cdmDatabaseSchema,
+    cohortTableNames = cohortTableNames,
     cohortDatabaseSchema = cohortDatabaseSchema,
-    vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-    cohortTable = cohortTable,
-    tempEmulationSchema = tempEmulationSchema,
-    packageName = "covidPhenotype",
-    cohortToCreateFile = "settings/CohortsToCreate.csv",
-    createCohortTable = TRUE,
-    generateInclusionStats = TRUE,
-    inclusionStatisticsFolder = outputFolder,
-    incremental = TRUE,
-    incrementalFolder = incrementalFolder
+    incremental = TRUE
   )
-  
-  ParallelLogger::logInfo("Running study diagnostics")
-  CohortDiagnostics::runCohortDiagnostics(
-    packageName = "covidPhenotype",
+
+  # get cohort definitions from study package
+  cohortDefinitionSet <-
+    dplyr::tibble(
+      CohortGenerator::getCohortDefinitionSet(
+        settingsFileName = "settings/CohortsToCreate.csv",
+        jsonFolder = "cohorts",
+        sqlFolder = "sql/sql_server",
+        packageName = "covidPhenotype",
+        cohortFileNameValue = "cohortId"
+      )
+    )
+
+  # Generate the cohort set
+  CohortGenerator::generateCohortSet(
     connectionDetails = connectionDetails,
     cdmDatabaseSchema = cdmDatabaseSchema,
-    vocabularyDatabaseSchema = vocabularyDatabaseSchema,
-    tempEmulationSchema = getOption("sqlRenderTempEmulationSchema"),
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames,
+    cohortDefinitionSet = cohortDefinitionSet,
+    incrementalFolder = incrementalFolder,
+    incremental = TRUE
+  )
+
+  # export stats table to local
+  CohortGenerator::exportCohortStatsTables(
+    connectionDetails = connectionDetails,
+    connection = NULL,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames,
+    cohortStatisticsFolder = outputFolder,
+    incremental = TRUE
+  )
+
+  # run cohort diagnostics
+  CohortDiagnostics::executeDiagnostics(
+    cohortDefinitionSet = cohortDefinitionSet,
+    exportFolder = outputFolder,
+    databaseId = databaseId,
+    connectionDetails = connectionDetails,
+    connection = NULL,
+    cdmDatabaseSchema = cdmDatabaseSchema,
+    tempEmulationSchema = tempEmulationSchema,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTable = cohortTable,
+    cohortTableNames = cohortTableNames,
+    vocabularyDatabaseSchema = vocabularyDatabaseSchema,
+    cohortIds = NULL,
     inclusionStatisticsFolder = outputFolder,
-    exportFolder = file.path(outputFolder, "diagnosticsExport"),
-    databaseId = databaseId,
     databaseName = databaseName,
     databaseDescription = databaseDescription,
+    cdmVersion = 5,
     runInclusionStatistics = TRUE,
     runIncludedSourceConcepts = TRUE,
     runOrphanConcepts = TRUE,
     runTimeDistributions = TRUE,
+    runVisitContext = TRUE,
     runBreakdownIndexEvents = TRUE,
     runIncidenceRate = TRUE,
+    runTimeSeries = FALSE,
     runCohortOverlap = TRUE,
-    runVisitContext = TRUE,
     runCohortCharacterization = TRUE,
+    covariateSettings = FeatureExtraction::createDefaultCovariateSettings(),
     runTemporalCohortCharacterization = TRUE,
-    runTimeSeries = TRUE,
+    temporalCovariateSettings = FeatureExtraction::createTemporalCovariateSettings(
+      useConditionOccurrence =
+        TRUE,
+      useDrugEraStart = TRUE,
+      useProcedureOccurrence = TRUE,
+      useMeasurement = TRUE,
+      temporalStartDays = c(-365, -30, 0, 1, 31),
+      temporalEndDays = c(-31, -1, 0, 30, 365)
+    ),
     minCellCount = 5,
     incremental = TRUE,
     incrementalFolder = incrementalFolder
+  )
+
+  # drop cohort stats table
+  CohortGenerator::dropCohortStatsTables(
+    connectionDetails = connectionDetails,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames,
+    connection = NULL
   )
 }

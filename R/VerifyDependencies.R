@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of covidPhenotype
 #
@@ -23,14 +23,20 @@ verifyDependencies <- function() {
   expectedVersions <- sapply(sapply(expected$Version, numeric_version), paste, collapse = ".")
   mismatchIdx <- which(observedVersions != expectedVersions)
   if (length(mismatchIdx) > 0) {
-    
-    lines <- sapply(mismatchIdx, function(idx) sprintf("- Package %s version %s should be %s",
-                                                       expected$Package[idx],
-                                                       observedVersions[idx],
-                                                       expectedVersions[idx]))
-    message <- paste(c("Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
-                       lines),
-                     collapse = "\n")
+    lines <- sapply(mismatchIdx, function(idx) {
+      sprintf(
+        "- Package %s version %s should be %s",
+        expected$Package[idx],
+        observedVersions[idx],
+        expectedVersions[idx]
+      )
+    })
+    message <- paste(c(
+      "Mismatch between required and installed package versions. Did you forget to run renv::restore()?",
+      lines
+    ),
+    collapse = "\n"
+    )
     stop(message)
   }
 }

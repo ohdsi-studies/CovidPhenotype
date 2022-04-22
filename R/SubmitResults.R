@@ -1,4 +1,4 @@
-# Copyright 2021 Observational Health Data Sciences and Informatics
+# Copyright 2022 Observational Health Data Sciences and Informatics
 #
 # This file is part of covidPhenotype
 #
@@ -37,9 +37,11 @@ uploadResults <- function(outputFolder, privateKeyFileName, userName) {
   if (length(fileName) == 0) {
     stop("Multiple results files found. Don't know which one to upload")
   }
-  OhdsiSharing::sftpUploadFile(privateKeyFileName = privateKeyFileName,
-                               userName = userName,
-                               remoteFolder = "cohortEvaluation",
-                               fileName = fileName)
+  OhdsiSharing::sftpUploadFile(
+    privateKeyFileName = privateKeyFileName,
+    userName = userName,
+    remoteFolder = "cohortEvaluation",
+    fileName = fileName
+  )
   ParallelLogger::logInfo("Finished uploading")
 }
